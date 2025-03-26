@@ -44,7 +44,6 @@ body {
 
   .main__content {
     flex: 1;
-    // backdrop-filter: blur(1px);
   }
 
   .row {
@@ -53,7 +52,6 @@ body {
 
   .form-select {
     --bs-form-select-bg-img: none;
-    padding: 0;
   }
 }
 
