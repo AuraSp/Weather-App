@@ -11,8 +11,7 @@
 - 🌎 **Meeting Baltics:** Check weather from the Baltics - Lithuania, Latvia, Estonia.
 - 🔥 **Popular Cities** Everyone's checking Vilnius? Must be the new hotspot!
 - 🔍 **Responsive Design** 'Don't worry, I can squeeze in'.
-- 🎨 **Dynamic Backgrounds & Icons** Change your mode with dynamic wallpapers.
-- 
+- 🎨 **Dynamic Backgrounds & Icons** Change your moode with dynamic wallpapers.
 
 ### API data
 
