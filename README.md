@@ -1,5 +1,5 @@
 <div align='center'>
-    <img src='' width='150'/>
+    <img src='' width='300' height='auto' alt='App logo' />
 <h3 align='center'>Mood Weather App</h3>
 </div>
 
@@ -10,10 +10,14 @@
 - 📅 **Weekend Forecast:** Plan your weekend for adventures or cozy movie marathons.
 - 🌎 **Meeting Baltics:** Check weather from the Baltics - Lithuania, Latvia, Estonia.
 - 🔥 **Popular Cities** Everyone's checking Vilnius? Must be the new hotspot!
-- 🎨 **Responsive Design** 'Don't worry, I can squeeze in'.
+- 🔍 **Responsive Design** 'Don't worry, I can squeeze in'.
+- 🎨 **Dynamic Backgrounds & Icons** Change your mode with dynamic wallpapers.
+- 
 
-Our application not only offers functionality but also boasts an aesthetically pleasing design. We have meticulously crafted Rain with your user experience as our top priority, guaranteeing both convenience and elegance in a single package.
+### API data
 
-### 🌐 Reliable Data Sources
+Weather is being fetched using [Meteo API](https://api.meteo.lt/). 
 
-We fetch weather data from [Open-Meteo](https://open-meteo.com/en/docs) and use [Open-Meteo's Geocoding API](https://open-meteo.com/en/docs/geocoding-api) to help you find cities easily.
+<img src='https://i.imgur.com/x6mha8w.png' type="image/png" width='400' height='auto' />\
+<i>Caption: Example screenshot of the application interface.</i>\
+You can read more in <a href='https://github.com/AuraSp/Weather-App/wiki/1.Home'>Wiki</a>
