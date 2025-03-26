@@ -1,0 +1,201 @@
+@use "variables" as vars;
+@use "mixins" as *;
+@use "placeholders" as *;
+@use "fonts" as fs;
+@use "functions" as *;
+
+#root {
+
+    &.medium,
+    &.small {
+        flex-direction: column;
+
+        .side__panel {
+            border: none;
+            padding: vars.$spacer * 2 0;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+
+            &--dropdown-select {
+                width: clamp(10rem, 80%, 20rem);
+                color: vars.$transparent-black;
+                border-color: vars.$transparent-black;
+                margin-top: vars.$spacer;
+            }
+
+            .panel-info {
+                display: none;
+
+            }
+        }
+
+
+
+
+
+
+
+        .main__content {
+
+            background-color: vars.$blur-transparent;
+
+            &--location {
+                flex-direction: column;
+
+                .title {
+                    position: static;
+
+                    &--head {
+                        letter-spacing: vars.$letter-space-sm;
+                    }
+                }
+
+                .condition {
+                    padding: 0;
+                    width: 100%;
+                    position: static;
+
+                    &--image {
+                        transform: scale(0.65);
+                    }
+
+                    &--type {
+                        letter-spacing: vars.$letter-space-sm;
+                    }
+
+                    &--temperature {
+                        font-size: rem(25);
+                        position: relative;
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 60%;
+                            bottom: 0;
+                            width: rem(1);
+                            height: rem(15);
+                            background-color: rgba(vars.$white, 0.8);
+                            transform: rotate(-20deg);
+                        }
+
+                        &::before {
+                            left: rem(-20);
+                        }
+
+                        &::after {
+                            right: rem(-20);
+                        }
+                    }
+
+                    &--wind,
+                    &--temperature,
+                    &--humidity {
+                        display: inline-block;
+                        margin-inline: vars.$spacer * 0.8;
+                        padding-top: vars.$spacer;
+                        font-family: fs.$font-righteous;
+                    }
+
+                    &--wind,
+                    &--humidity {
+                        font-size: rem(18);
+
+                        svg {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+
+            &--current-temperature,
+            .current-date {
+                display: none;
+                padding: 0;
+            }
+
+            &--weekly-forecast {
+                @include glass-effect;
+                border-radius: vars.$border-radius-lg;
+                margin-top: vars.$spacer * 4;
+                height: max-content;
+
+                .weekly-forecast-title {
+                    font-size: rem(20);
+                    font-family: fs.$font-righteous;
+                    padding: vars.$spacer 0;
+                    margin: 0;
+                }
+
+                .weekly-forecast-card {
+                    padding: vars.$spacer * 2 vars.$spacer * 1 vars.$spacer * 4 vars.$spacer * 1;
+                    justify-content: space-evenly;
+                    gap: vars.$spacer;
+                    overflow-x: scroll;
+
+
+                    .card-box {
+                        border-radius: vars.$border-radius-lg;
+                        display: flex;
+                        flex-direction: column;
+                        gap: vars.$spacer * 2;
+                        align-items: center;
+                        justify-content: center;
+                        width: 4rem;
+                        max-width: 4rem;
+                        height: 9.375rem;
+                        background-color: rgba(vars.$black, 0.2);
+                        box-shadow: rgba(vars.$black, 0.15) 1.95px 1.95px 2.6px;
+
+                        .card-day {
+                            font-size: rem(15);
+                        }
+
+                        .card-humidity {
+                            font-size: rem(15);
+                            font-family: fs.$font-righteous;
+                            font-weight: 500;
+
+                            svg {
+                                margin-right: .2rem;
+                            }
+                        }
+
+                        .card-temperature,
+                        .temperature-unit {
+                            font-size: rem(18);
+                        }
+
+                        .temperature-unit {
+                            vertical-align: unset;
+                            font-size: rem(16);
+                        }
+
+                        &:first-of-type {
+                            background-color: vars.$transparent-black;
+                        }
+                    }
+                }
+            }
+
+            &--popular-forecast {
+                .popular-forecast-cards {
+                    gap: 0;
+                    justify-content: space-evenly;
+
+                    .popular-card {
+                        .card-name {
+                            font-size: rem(15);
+                        }
+
+                        .card-temperature {
+                            .temperature-unit {
+                                font-size: rem(16);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

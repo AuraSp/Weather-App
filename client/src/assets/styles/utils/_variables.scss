@@ -1,0 +1,33 @@
+// Colors
+$white: #fff;
+$black: #000;
+$accent: #ffd17b;
+$transparent-white: rgba(255, 255, 255, 0.3);
+$transparent-black: rgba(0, 0, 0, 0.5);
+$blur-transparent:rgba(43, 78, 106, 0.1);
+$bg-transparent: transparent;
+$body-bg: #141414;
+$card-border:#ffffff2d;
+
+// Spacing
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+);
+
+// Border
+$border-radius-sm: 15px;
+$border-radius-lg: 30px;
+$border-width: 1px;
+$border-width-md:2px;
+
+
+// Letter spacing
+$letter-space-sm: 2px;
+$letter-space-md: 5px;
+$letter-space-lg: 10px;

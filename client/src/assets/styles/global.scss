@@ -1,0 +1,83 @@
+@use "utils/variables" as vars;
+@use "utils/mixins" as *;
+@use "utils/placeholders" as *;
+@use "utils/fonts" as fs;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: normal;
+  list-style: none;
+  text-decoration: none;
+  font-weight: normal;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: auto;
+  -webkit-tap-highlight-color: transparent;
+  background-color: vars.$body-bg;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  @include flex(flex, row, wrap, unset, unset);
+  color: vars.$white;
+  background: var(--root-bg-image) center/cover no-repeat;
+
+  .side__panel {
+    flex-basis: 15%;
+
+  }
+
+  .main__content {
+    flex: 1;
+    backdrop-filter: blur(1px);
+  }
+
+  .row {
+    --bs-gutter-x: 0;
+  }
+
+  .form-select {
+    --bs-form-select-bg-img: none;
+    padding: 0;
+  }
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+
+  &-thumb,
+  &-track,
+  &-corner {
+    background-color: vars.$bg-transparent;
+  }
+
+  &-thumb,
+  &-track {
+    border-radius: 6px;
+  }
+
+  &-thumb {
+    border: vars.$border-width-md solid;
+    background-clip: content-box;
+
+    &:hover {
+      background-color: vars.$black;
+    }
+  }
+}

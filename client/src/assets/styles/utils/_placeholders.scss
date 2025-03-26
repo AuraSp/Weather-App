@@ -1,0 +1,29 @@
+@use 'fonts' as fs;
+@use 'variables' as vars;
+@use 'mixins' as *;
+@use "functions" as *;
+
+%temperature-display {
+    font-family: fs.$font-fredoka;
+    font-size: rem(60);
+
+    .temperature-unit {
+        @include temperature-unit;
+    }
+}
+
+%card-style {
+    @include glass-effect;
+    padding: vars.$spacer * 0.8;
+    cursor: pointer;
+}
+
+%clickable-card {
+    @extend %card-style;
+    transition: all 0.2s ease;
+
+
+    &:active {
+        transform: scale(0.8);
+    }
+}

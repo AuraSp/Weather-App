@@ -1,0 +1,184 @@
+@use "utils/variables" as vars;
+@use "utils/mixins" as *;
+@use "utils/placeholders" as *;
+@use "utils/fonts" as fs;
+@use "utils/functions" as *;
+
+.side__panel {
+    @include flex(flex, column, nowrap, unset, center);
+    border-right: vars.$border-width solid vars.$transparent-white;
+    padding: vars.$spacer 0 0 0;
+    @include glass-effect;
+    height: inherit;
+
+    &--dropdown-select {
+        width: clamp(10rem, 5vw + 1rem, 12rem);
+        font-size: rem(16);
+        border: 0;
+        margin-top: vars.$spacer * 4;
+        border-bottom: vars.$border-width solid rgba(vars.$white, 0.5);
+        font-family: fs.$font-josefin;
+        appearance: auto;
+    }
+
+    .panel-info {
+        @include flex(flex, column, nowrap, unset, center);
+        justify-content: space-evenly;
+        margin-top: vars.$spacer * 5;
+        padding: 0 vars.$spacer * 2;
+
+        &--feel-temperature,
+        &--gust,
+        &--precipitation {
+            font-family: fs.$font-fredoka;
+            font-size: rem(20);
+
+            span {
+                display: block;
+                padding: vars.$spacer * 0.5 0;
+            }
+        }
+    }
+}
+
+.main__content {
+    flex: 1;
+    height: inherit;
+
+    &--location {
+        @include flex(flex, row, wrap, space-between, center);
+        height: min-content;
+
+        .title {
+            position: relative;
+            padding: 0 vars.$spacer * 2.5;
+            height: auto;
+            top: vars.$spacer * 2;
+
+            &--head {
+                font-size: clamp(2.1875rem, 3vw + 1rem, 6.25rem);
+                font-family: fs.$font-righteous;
+            }
+
+            &--subhead {
+                font-family: fs.$font-josefin;
+                font-size: clamp(1.1875rem, 5vw + 10px, 30px);
+                letter-spacing: vars.$letter-space-sm;
+            }
+        }
+
+        .condition {
+            right: 5em;
+            position: relative;
+            top: 5em;
+
+            &--image {
+                padding-bottom: vars.$spacer *.5;
+            }
+
+            &--type {
+                font-size: clamp(20px, 2vw + 12px, 40px);
+                letter-spacing: vars.$letter-space-md;
+                font-family: fs.$font-righteous;
+            }
+
+            &--wind,
+            &--humidity {
+                display: block;
+                font-family: fs.$font-fredoka;
+                font-size: rem(20);
+                letter-spacing: vars.$letter-space-sm;
+                padding: vars.$spacer * 0.4 0;
+                font-weight: 500;
+            }
+        }
+    }
+
+    &--current-temperature {
+        padding: vars.$spacer * 4 0 vars.$spacer * 2 vars.$spacer * 2.5;
+        letter-spacing: vars.$letter-space-sm;
+        color: vars.$accent;
+
+        .current-date {
+            font-family: fs.$font-fredoka;
+            font-size: rem(18);
+        }
+
+        .current-temperature {
+            @extend %temperature-display;
+        }
+    }
+
+    &--weekly-forecast {
+        display: inline-block;
+        width: 100%;
+        overflow: scroll;
+
+        .weekly-forecast-title {
+            font-size: rem(35);
+            font-family: fs.$font-josefin;
+            font-weight: bold;
+        }
+
+        .weekly-forecast-card {
+            @include flex(flex, row, nowrap, space-around, center);
+            padding: vars.$spacer * 1.5 vars.$spacer * 10 vars.$spacer * 2 vars.$spacer * 10;
+            color: vars.$accent;
+
+            .card-box {
+
+                .card-day {
+                    font-family: fs.$font-righteous;
+                }
+
+                .card-temperature {
+                    font-size: rem(40);
+                    font-family: fs.$font-fredoka;
+
+                    .temperature-unit {
+                        vertical-align: super;
+                        @include card-temperature-unit
+                    }
+                }
+            }
+        }
+    }
+
+    &--popular-forecast {
+        .popular-forecast-card {
+            @include flex(flex, row, wrap, center, center);
+            padding: vars.$spacer * 3 0 vars.$spacer * 2 0;
+            gap: vars.$spacer * 4;
+            overflow-x: hidden;
+
+            .card-box {
+                @extend %card-style;
+                @extend %clickable-card;
+                border-color: vars.$card-border;
+                padding: vars.$spacer * .8;
+                width: 8rem;
+                height: 8rem;
+                cursor: pointer;
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(vars.$white, 0.1);
+                }
+
+                .card-name {
+                    font-family: fs.$font-righteous;
+                }
+
+                .card-temperature {
+                    font-size: clamp(20px, 5vw + 10px, 30px);
+                    font-family: fs.$font-fredoka;
+
+                    .temperature-unit {
+                        @include card-temperature-unit
+                    }
+                }
+            }
+        }
+    }
+}

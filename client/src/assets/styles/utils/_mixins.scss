@@ -1,0 +1,32 @@
+@use 'variables' as vars;
+@use "functions" as *;
+
+@mixin glass-effect {
+    background-color: vars.$blur-transparent;
+    backdrop-filter: blur(1.25rem);
+    -webkit-backdrop-filter: blur(1.25rem);
+}
+
+@mixin text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin temperature-unit {
+    font-size: 0.75em;
+    padding-left: vars.$spacer *.1;
+}
+
+@mixin card-temperature-unit {
+    font-size: rem(30);
+    padding-left: vars.$spacer *.1;
+}
+
+@mixin flex($display, $direction, $wrap, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    justify-content: $justify;
+    align-items: $align;
+}
