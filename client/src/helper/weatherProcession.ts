@@ -35,7 +35,7 @@ export const processForecastData = (forecastTimestamps: Forecast[]) => {
     const wallpaperPath = currentForecast
         ? weatherImage[currentForecast.conditionCode]?.wallpaper || ''
         : '';
-
+console.log(wallpaperPath)
     // Collect one forecast per day for the next 5 days
     const dailyForecast: Forecast[] = [];
     let currentDate = '';

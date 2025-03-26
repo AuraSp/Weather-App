@@ -61,7 +61,6 @@ function App() {
 
 
 
-
   useEffect(() => {
     const mostViewed = JSON.parse(localStorage.getItem('mostViewedCities') || '[]');
 
@@ -223,12 +222,15 @@ function App() {
     })
   };
 
+  console.log(currentForecast)
   // UPDATE `root`s background and screen size
   useEffect(() => {
     const root = document.getElementById('root');
+    // const defaultImage = weatherImage[3].wallpaper;
 
     if (root) {
       root.style.setProperty('--root-bg-image', `url(${currentWallpaper})`);
+
 
       root.classList.remove('small', 'medium', 'large');
       root.classList.add(screenSize);
@@ -237,11 +239,10 @@ function App() {
 
 
   // Loading state
-  if (isLoading) return <Row>
+  if (isLoading) return <Row className='text-warning d-flex m-auto justify-items-center w-100 h-100'>
     <Col className="text-center">
-      <Spinner animation="border" role="status">
-        <span className="visually-hidden">Loading weather data...</span>
-      </Spinner>
+      <Spinner animation="border" role="status"></Spinner>
+      <span className="d-block pt-4 fs-4 text-white">Loading weather data...</span>
     </Col>
   </Row>;
 
@@ -353,7 +354,7 @@ function App() {
 
             {/* WEEKLY FORECAST FOR THAT CITY */}
             <Row className="main__content--weekly-forecast w-100 h-auto">
-              <h3 className='weekly-forecast-title w-100 text-center'>Weekly Forecast</h3>
+              <h3 className='weekly-forecast-title w-100 text-center m-0'>Weekly Forecast</h3>
               <div className="weekly-forecast-card">
                 {dailyForecast.map((forecast, index) => (
                   <div key={index} className='card-box'>

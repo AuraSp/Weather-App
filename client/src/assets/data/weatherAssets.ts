@@ -38,51 +38,51 @@ export const weatherImage: WeatherImages = {
         icon: "/icons/heavy-rain.svg"
     },
     "thunder": {
-        wallpaper: "/background/thunder.png",
+        wallpaper: "/backgrounds/thunder.png",
         icon: "/icons/thunder.svg"
     },
     "isolated-thunderstorms": {
-        wallpaper: "/background/thunder.png",
+        wallpaper: "/backgrounds/thunder.png",
         icon: "/icons/isolated-thunderstorms.svg"
     },
     "thunderstorms": {
-        wallpaper: "/background/thunder.png",
+        wallpaper: "/backgrounds/thunder.png",
         icon: "/icons/thunderstorms.svg"
     },
     "heavy-rain-with-thunderstorms": {
-        wallpaper: "/background/rain.png",
+        wallpaper: "/backgrounds/rain.png",
         icon: "/icons/heavy-rain-with-thunderstorms.svg"
     },
     "light-sleet": {
-        wallpaper: "/background/sleet.png",
+        wallpaper: "/backgrounds/sleet.png",
         icon: "/icons/light-sleet.svg"
     },
     "sleet": {
-        wallpaper: "/background/sleet.png",
+        wallpaper: "/backgrounds/sleet.png",
         icon: "/icons/sleet.svg"
     },
     "freezing-rain": {
-        wallpaper: "/background/sleet.png",
+        wallpaper: "/backgrounds/sleet.png",
         icon: "/icons/freezing-rain.svg"
     },
     "light-snow": {
-        wallpaper: "/background/snow.png",
+        wallpaper: "/backgrounds/snow.png",
         icon: "/icons/light-snow.svg"
     },
     "snow": {
-        wallpaper: "/background/snow.png",
+        wallpaper: "/backgrounds/snow.png",
         icon: "/icons/snow.svg"
     },
     "heavy-snow": {
-        wallpaper: "/background/snow.png",
+        wallpaper: "/backgrounds/snow.png",
         icon: "/icons/heavy-snow.svg"
     },
     "fog": {
-        wallpaper: "/background/fog.png",
+        wallpaper: "/backgrounds/fog.png",
         icon: "/icons/fog.svg"
     },
     "hail": {
-        wallpaper: "/background/hail.png",
+        wallpaper: "/backgrounds/hail.png",
         icon: "/icons/hail.svg"
-    }
+    },
 };

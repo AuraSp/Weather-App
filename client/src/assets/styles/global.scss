@@ -34,7 +34,8 @@ body {
   min-height: 100vh;
   @include flex(flex, row, wrap, unset, unset);
   color: vars.$white;
-  background: var(--root-bg-image) center/cover no-repeat;
+  background: var(--root-bg-image,
+      url('/backgrounds/cloudy.png')) center/cover no-repeat;
 
   .side__panel {
     flex-basis: 15%;
@@ -43,7 +44,7 @@ body {
 
   .main__content {
     flex: 1;
-    backdrop-filter: blur(1px);
+    // backdrop-filter: blur(1px);
   }
 
   .row {
