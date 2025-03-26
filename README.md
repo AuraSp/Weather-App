@@ -20,4 +20,4 @@ Weather is being fetched using [Meteo API](https://api.meteo.lt/).
 
 <img src='https://i.imgur.com/x6mha8w.png' type="image/png" width='400' height='auto' />\
 <i>Caption: Example screenshot of the application interface.</i>\
-You can read more in <a href='https://github.com/AuraSp/Weather-App/wiki/1.Home'>Wiki</a>
+You can read about setup and more in <a href='https://github.com/AuraSp/Weather-App/wiki/1.Home'>Wiki</a>
