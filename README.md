@@ -1,5 +1,5 @@
 <div align='center'>
-    <img src='https://github.com/AuraSp/Weather-App/blob/main/client/public/logo.png' width='300' height='auto' alt='App logo' />
+    <img src='https://github.com/AuraSp/Weather-App/blob/main/client/public/logo.png' width='180' height='auto' alt='App logo' />
 <h3 align='center'>Mood Weather App</h3>
 </div>
 
